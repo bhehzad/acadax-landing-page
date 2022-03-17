@@ -1,0 +1,109 @@
+@import "_variables";
+
+.footer{
+    margin-top: 7rem;
+    width: 100vw;
+    background-color: $dark_blue;
+    padding: 4rem 0;
+
+    .footer-container{
+        width: 73%;
+        margin: auto;
+
+        @media screen and (max-width: 950px) {
+            width: 80%;
+        }
+
+        .brand{
+            // text-align: center;
+            margin: auto;
+            width: 10rem;
+
+            @media screen and (max-width: 707px){
+                width: 7rem;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+
+        .menu{
+            margin: 4rem auto;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style-type: none;
+
+                @media screen and (max-width: 707px) {
+                    flex-direction: column;
+                    margin-top: 1rem;
+                }
+                // justify-content: space-between;
+    
+               
+                
+                li{
+                    padding: 0 1rem;
+                    @media screen and (max-width: 865px) {
+                        padding:0 0.8rem;
+                    }
+                    
+                    @media screen and (max-width: 707px){
+                        padding-bottom: 1.5rem;
+                    }
+
+                    a{
+                        font-family: $sofia;
+                        color: #fff;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+
+                        @media screen and (max-width: 865px) {
+                            font-size: 0.8rem;
+                        }
+                    }
+    
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                }
+            }  
+        }
+
+        hr{
+            height: 1px;
+            color: #fff;
+            margin-top: 1rem;
+
+            @media screen and (max-width: 707px){
+                margin-top: 0;
+            }
+        }
+
+        .copright{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 3rem;
+
+            @media screen and (max-width: 707px){
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .company, .platform{
+                font-family: $sofia;
+                color: #fff;
+                font-size: 1rem;
+
+                @media screen and (max-width: 865px) {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

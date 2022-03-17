@@ -1,0 +1,136 @@
+@import "_variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100vw;
+    background-color: $dark_blue;
+    padding: 2rem 4rem;
+    z-index: 99;
+
+    @media screen and (max-width: 1200px) {
+        padding: 2rem 2rem;
+    }
+}
+
+.navbar{
+    // these lines are optional if not satisfy remove it 
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    // to this 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand{
+        width: 12rem;
+
+        @media screen and (max-width: 768px) {
+            width: 9rem;
+        }
+
+        img{
+            width: 100%;
+            margin-left: -0.5rem;
+        }
+    }
+
+    .menu.active{
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 7rem;
+    }
+
+    .menu{
+        
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+
+            @media screen and (max-width: 950px) {
+                display: block;
+            }
+            
+            li{
+                padding: 0 1rem;
+
+                @media screen and (max-width: 950px){
+                    padding: 1rem 3rem;
+                    // margin-left: auto;
+                    // text-align: right;
+                }
+
+                a{
+                    font-family: $sofia;
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+
+                    @media screen and (max-width: 950px){
+                        color: $black;
+                        // text-align: right;
+                    }
+                }
+
+                .btn{
+                    display: flex;
+                    align-items: center;
+                    padding: 1.2rem 2rem;
+                    background-color: #fff;
+                    color: $dark_blue;
+                    border-radius: 50px;
+                    margin-left: 1rem;
+                    border: 0;
+
+                    @media screen and (max-width: 950px){
+                        margin-left: 0;
+                        background-color: $dark_blue;
+                        color: #fff;
+
+                    }
+                    img{
+                        width: 1rem;
+                        margin-right: 8px;
+                    }
+
+                    .text{
+                        font-size: 1rem;
+                        font-family: $sofia;
+                    }
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+        }
+
+       
+    }
+    .hamburger{
+        display: none;
+
+        img{
+        @media screen and (max-width: 768px) {
+            width: 2rem;
+        }
+    }
+        @media screen and (max-width: 950px) {
+            display: block;
+        }
+    }
+}
